@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# env / secrets (only if you have any)
+.env
