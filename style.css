@@ -1,8 +1,9 @@
 /* Makes width calculations include padding + border */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
 
 body {
   margin: 0;
@@ -12,7 +13,7 @@ body {
 /* NAV STYLING */
 .nav-links {
   list-style: none; /* REMOVES BULLETS */
-  padding: 0;       /* REMOVES BULLET GAP */
+  padding: 0; /* REMOVES BULLET GAP */
   margin: 0;
   display: flex;
   gap: 40px;
@@ -26,18 +27,20 @@ body {
 }
 
 /* Link Base Styles and States */
-.nav-links a { 
+.nav-links a {
   text-decoration: none; /* Removes default underline */
-  color: #0B0720;           /* Sets color for default/unvisited links */
+  color: #0b0720; /* Sets color for default/unvisited links */
   font-size: 1.4rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
 
-.nav-pills{
-  border: 2px, solid #B000F0;
+.nav-pills {
+  border:
+    2px,
+    solid #b000f0;
   border-radius: 3px;
-  color: #2D5BFF;
+  color: #2d5bff;
   padding: 10px;
 }
 
@@ -55,23 +58,25 @@ body {
 }
 
 /* Hamburger Button - hidden by default */
-.hamburger { 
-  display: none; 
-  cursor: pointer; 
-  background: none; 
-  border: none; 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
 }
-.hamburger span { 
-  display: block; 
-  width: 25px; 
-  height: 3px; 
-  background: #0B0720; 
-  margin: 5px; 
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #0b0720;
+  margin: 5px;
 }
 
 /* Mobile View (under 768px) */
 @media (max-width: 768px) {
-  .hamburger { display: block; }
+  .hamburger {
+    display: block;
+  }
   .nav-links {
     display: none; /* Hide links initially */
     flex-direction: column;
@@ -79,11 +84,14 @@ body {
     text-align: center;
     padding-top: 10px;
   }
-  .nav-links.active { display: flex; } /* Show when JS adds 'active' */
+  .nav-links.active {
+    display: flex;
+  } /* Show when JS adds 'active' */
 }
 
-hr{
+hr {
   width: 85%;
+  max-width: 1300px;
 }
 
 /* CONTAINERS */
@@ -101,22 +109,23 @@ hr{
   display: block; /* Fixes the white space bug */
 }
 
-.intro-card{
-
+.intro-card {
   /* margin: 0 auto; */
   margin: 20px auto;
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 85%;
+  width: 85%;
+  max-width: 1300px;
+
   background-color: #ffffff;
   font-size: 1.2rem;
   background-image: linear-gradient(
-    45deg, 
-    #f8f9fa 25%, 
-    transparent 25%, 
-    transparent 50%, 
-    #f8f9fa 50%, 
-    #f8f9fa 75%, 
-    transparent 75%, 
+    45deg,
+    #f8f9fa 25%,
+    transparent 25%,
+    transparent 50%,
+    #f8f9fa 50%,
+    #f8f9fa 75%,
+    transparent 75%,
     transparent
   );
 
@@ -125,24 +134,25 @@ hr{
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  color: #0B0720;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: #0b0720;
 }
 
-  .intro-card h2 {
-    font-size: 2.25rem; /* Scaled down slightly for card fit */
-    margin-top: 0;
-    color: #B000F0;
-  }
+.intro-card h2 {
+  font-size: 2.25rem; /* Scaled down slightly for card fit */
+  margin-top: 0;
+  color: #b000f0;
+}
 
 .intro-card p {
   font-size: 1.5rem;
 }
 
-
 /* MAIN WRAPPER */
+
 .services-container {
-  max-width: 85%; /* Wider to accommodate 3 columns */
+   width: 85%;
+  max-width: 1300px;
   margin: 20px auto;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -151,35 +161,33 @@ hr{
 
 .services-grid {
   display: flex;
-  flex-direction: column;   /* stack panels */
+  flex-direction: column; /* stack panels */
   gap: 25px;
 }
-
 
 /*THE INDIVIDUAL CARD*/
 
 .service-card {
-
   position: relative;
   overflow: hidden;
 
   background-color: #ffffff;
   background-image: linear-gradient(
-    45deg, 
-    #f8f9fa 25%, 
-    transparent 25%, 
-    transparent 50%, 
-    #f8f9fa 50%, 
-    #f8f9fa 75%, 
-    transparent 75%, 
+    45deg,
+    #f8f9fa 25%,
+    transparent 25%,
+    transparent 50%,
+    #f8f9fa 50%,
+    #f8f9fa 75%,
+    transparent 75%,
     transparent
   );
   background-size: 15px 15px;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-   padding: 25px 25px 25px 35px; /* left padding to clear the bar */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  color: #0B0720;
+  padding: 25px 25px 25px 35px; /* left padding to clear the bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: #0b0720;
 }
 
 .service-card::before {
@@ -189,16 +197,17 @@ hr{
   left: 0;
   width: 10px;
   height: 100%;
-  background: var(--accent, #2D5BFF); /* uses card-specific color, falls back to blue */
+  background: var(
+    --accent,
+    #2d5bff
+  ); /* uses card-specific color, falls back to blue */
 }
-
-
 
 /* Adjusting your H2/H3 specifically inside cards */
 .service-card h2 {
   font-size: 1.6rem; /* Scaled down slightly for card fit */
   margin-top: 0;
-  color: #0B0720;
+  color: #0b0720;
 }
 
 .service-card h3 {
@@ -245,7 +254,7 @@ hr{
 /* Two columns INSIDE a card (only where you add .service-columns in HTML) */
 .service-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
   gap: 16px;
   margin-top: 18px;
   padding-top: 18px;
