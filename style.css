@@ -241,3 +241,20 @@ hr{
     box-sizing: border-box;
   }
 }
+
+/* Two columns INSIDE a card (only where you add .service-columns in HTML) */
+.service-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #e7e7e7;
+}
+
+/* On smaller screens, stack back to one column */
+@media (max-width: 1024px) {
+  .service-columns {
+    grid-template-columns: 1fr;
+  }
+}
