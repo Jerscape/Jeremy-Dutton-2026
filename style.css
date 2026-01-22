@@ -113,10 +113,10 @@ hr {
 .intro-card {
   /* margin: 0 auto; */
   /* margin: 20px auto; */
-  margin: 20px auto 35px;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: inherit;
   width: auto;
-  max-width: 1300px;
+  max-width: none;
 
   background-color: #ffffff;
   font-size: 1.2rem;
@@ -148,12 +148,14 @@ hr {
 
 .services_h2 {
   font-size: 2.25rem; /* Scaled down slightly for card fit */
-  margin-top: 0;
+  margin: 0 0 24px 0;  
   color: #b000f0;
-  padding-left: 25px;
-  /* border-bottom: 1px;
-  border-style: solid; */
+  padding-left: 0;
+
 }
+
+
+
 
 .intro-card p {
   font-size: 1.2rem;
@@ -165,7 +167,7 @@ hr {
 .section-container {
   width: 85%;
   max-width: 1300px;
-  margin: 20px auto; /* for now, keep it similar to what you had */
+  margin: 20px auto 35px; /* for now, keep it similar to what you had */
   font-family: Arial, Helvetica, sans-serif;
 }
 
