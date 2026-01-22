@@ -44,9 +44,9 @@ body {
   padding: 10px;
 }
 
-.nav-links a:visited {
+/* .nav-links a:visited {
   color: #ccc; /* Slightly different color for visited links */
-}
+} */
 
 .nav-links a:hover {
   color: #4da6ff; /* A lighter blue color on hover */
@@ -90,8 +90,9 @@ body {
 }
 
 hr {
-  width: 85%;
+  /* width: 85%; */
   max-width: 1300px;
+  padding-bottom: 10px;
 }
 
 /* CONTAINERS */
@@ -111,9 +112,10 @@ hr {
 
 .intro-card {
   /* margin: 0 auto; */
-  margin: 20px auto;
+  /* margin: 20px auto; */
+  margin: 20px auto 35px;
   font-family: Arial, Helvetica, sans-serif;
-  width: 85%;
+  width: auto;
   max-width: 1300px;
 
   background-color: #ffffff;
@@ -144,16 +146,42 @@ hr {
   color: #b000f0;
 }
 
+.services_h2 {
+  font-size: 2.25rem; /* Scaled down slightly for card fit */
+  margin-top: 0;
+  color: #b000f0;
+  padding-left: 25px;
+  /* border-bottom: 1px;
+  border-style: solid; */
+}
+
 .intro-card p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 /* MAIN WRAPPER */
 
+.section-container {
+  width: 85%;
+  max-width: 1300px;
+  margin: 20px auto; /* for now, keep it similar to what you had */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section_h2 {
+  font-size: 2.25rem;
+  margin: 0 0 24px 0;  /* space under heading */
+  color: #b000f0;
+}
+
+
+
 .services-container {
    width: 85%;
   max-width: 1300px;
-  margin: 20px auto;
+  /* margin: 20px auto; */
+  margin: 0 auto 20px; /* no top margin, keep bottom */
   font-family: Arial, Helvetica, sans-serif;
 }
 
