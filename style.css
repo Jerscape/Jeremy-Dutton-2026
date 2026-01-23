@@ -44,9 +44,6 @@ body {
   padding: 10px;
 }
 
-/* .nav-links a:visited {
-  color: #ccc; /* Slightly different color for visited links */
-} */
 
 .nav-links a:hover {
   color: #4da6ff; /* A lighter blue color on hover */
@@ -92,18 +89,7 @@ body {
 hr {
   /* width: 85%; */
   max-width: 1300px;
-  padding-bottom: 10px;
 }
-
-/* CONTAINERS */
-/* .container-banner {
-  width: 85%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0B0720;
-  
-} */
 
 .banner {
   width: 100%;
@@ -117,7 +103,6 @@ hr {
   font-family: inherit;
   width: auto;
   max-width: none;
-
   background-color: #ffffff;
   font-size: 1.2rem;
   background-image: linear-gradient(
@@ -133,27 +118,36 @@ hr {
 
   background-size: 15px 15px; /* Size of the stripes */
   /* END OF REPLACEMENT */
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0; */
+  border: 1px solid #b000f0;
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   color: #0b0720;
+
+  position: relative;
+  overflow: hidden;
 }
+
+.intro-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: var(
+    --accent,
+    #ccc
+  ); /* uses card-specific color, falls back to blue */
+}
+
 
 .intro-card h2 {
   font-size: 2.25rem; /* Scaled down slightly for card fit */
   margin-top: 0;
   color: #b000f0;
 }
-
-.services_h2 {
-  font-size: 2.25rem; /* Scaled down slightly for card fit */
-  margin: 0 0 24px 0;  
-  color: #b000f0;
-  padding-left: 0;
-
-}
-
 
 
 
@@ -171,21 +165,13 @@ hr {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.section_h2 {
+.section_title {
   font-size: 2.25rem;
   margin: 0 0 24px 0;  /* space under heading */
   color: #b000f0;
 }
 
 
-
-.services-container {
-   width: 85%;
-  max-width: 1300px;
-  /* margin: 20px auto; */
-  margin: 0 auto 20px; /* no top margin, keep bottom */
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 /* THE GRID */
 
@@ -295,5 +281,110 @@ hr {
 @media (max-width: 1024px) {
   .service-columns {
     grid-template-columns: 1fr;
+  }
+}
+
+/* CONTACT FORM */
+
+.form-3col {
+  display: grid;
+  grid-template-columns: 250px 200px 1fr; /* CTA | labels | fields */
+  gap: 12px 14px;
+  align-items: start;
+}
+
+.form-3col .cta {
+  grid-column: 1;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fff;
+  /* border: 1px solid rgba(0,0,0,0.08); */
+}
+
+.cta p {
+  font-size: 1.2rem;
+}
+
+.form-3col .fields {
+  grid-column: 2 / 4;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 10px 12px;
+  align-items: center;
+}
+
+.form-3col label {
+  text-align: right;
+  margin: 0;
+}
+
+/* inputs + select + textarea */
+.form-3col input[type="text"],
+.form-3col textarea {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Make message box larger + align to top beside its label */
+.form-3col textarea {
+  min-height: 180px;  /* increase to 220/260 if you want bigger */
+  resize: vertical;   /* user can drag taller */
+}
+
+.form-3col .fields label[for="message"] {
+  align-self: start;  /* makes label sit at top of tall textarea */
+  padding-top: 8px;   /* optional: visually lines up with textarea padding */
+}
+
+.form-3col .submit-btn {
+  grid-column: 2 / 3;   /* input column (inside .fields) */
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-3col .submit-btn:hover {
+  filter: brightness(0.95);
+}
+
+.form-container {
+ border: 1px solid #b000f0;
+  border-radius: 12px;
+   padding: 25px 25px 25px 35px; /* left padding to clear the bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+}
+
+#form-section {
+  background-color: #999;
+  width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  .form-3col {
+    grid-template-columns: 1fr;
+  }
+
+  .form-3col .fields {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .form-3col label {
+    text-align: left;
+  }
+
+  .form-3col .fields label[for="message"] {
+    align-self: auto;
+    padding-top: 0;
   }
 }

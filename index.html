@@ -28,7 +28,7 @@
 <!-- <hr> -->
   
 <section id="about" class="section-container">
-      <h2 class="section_h2">About</h2>
+      <h2 class="section_title">About</h2>
   <div class="intro-card">
     <p class="about">I have a curious and thirsty mind. It has led me on a career journey from HR, to Non-Profit, 
       to Tech. Along the way I picked up experience and skills in Project Management, Coaching, Business Development, Training, 
@@ -41,9 +41,9 @@
 </section>
 
   
-  <div class="services-container">
-    <h2 class="section_h2">Services</h2>
-    <!-- <hr> -->
+  <section id="services" class="section-container">
+      <hr>
+    <h2 class="section_title">Services</h2>
     <div class="services-grid">
       
       <!-- Card 1: Program and Project Delivery (Your Current Content) -->
@@ -151,10 +151,47 @@
      
     </div> <!-- end services grid-->
     
+</section>
+
+<!--CONTACT SECTION -->
+
+ <section id="form-section">
+  <hr>
+   <h2 class="section_title">Contact</h2>
+
+<div class="form-container">
+  <form action="/action_page.php" class="form-3col">
+
+    <aside class="cta">
+      <h3>Interested in Learning More?</h3>
+      <p>I am always happy to have a chat, so I can learn more about your needs.</p>
+      <p><strong>Typical response:</strong> 1–2 business days.</p>
+    </aside>
+
+    <div class="fields">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
+
+      <label for="org">Organization:</label>
+      <input type="text" id="org" name="org" autocomplete="organization" placeholder="Company / org (optional)">
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" autocomplete="tel" placeholder="(###) ###-#### (optional)">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="What can I help with?"></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
     </div>
-  </div>
 
+  </form>
+</div>
 
+ </section>
 
 </main>
 <footer>
