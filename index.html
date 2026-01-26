@@ -11,28 +11,40 @@
 
 </head>
 <body>
-<div class="container-banner">
-<img src="images/banner-image.rev.png" class="banner">
-</div>
+<header>
+
+  <picture>
+    <source media="(max-width: 767px)" srcset="/images/banner-mobile.png" type="image/png" />
+    <source media="(min-width: 768px)" srcset="/images/banner-desktop.png" type="image/png" />
+    <img class="banner__img" src="/images/banner-desktop.png" alt="Site banner" />
+  </picture>
+
+</header>
 
 <main>
+
+
 <div class="container-nav">
   <nav class="navbar">
     <ul class="nav-links" id="nav-links">
-    <div class="nav-pills"> <li><a href="#meeting">BOOK MEETING</a></li></div>
-    <div class="nav-pills"> <li><a href="#services">SERVICES</a></li></div>
-    <div class="nav-pills"> <li><a href="#about">ABOUT ME</a></li></div>
-    <div class="nav-pills"> <li><a href="#contact">CONTACT</a></li></div>
+    <li class="nav-pills"><a href="#meeting">BOOK MEETING</a></li>
+    <li class="nav-pills"><a href="#services">SERVICES</a></li>
+    <li class="nav-pills"><a href="#about">ABOUT ME</a></li>
+    <li class="nav-pills"><a href="#contact">CONTACT</a></li>
   </ul>
+
   <button class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </button>
   </nav>
+</div>
+
 <!-- <hr> -->
   
+
 <section id="about" class="section-container">
 
-      <h2 class="section_title"><i class="fa-sharp fa-solid fa-people-pulling"></i> About</h2>
+  <h2 class="section_title"> About <i class="fa-sharp fa-solid fa-people-pulling icon-about"></i></h2>
   <div class="intro-card">
     <p class="about">I have a curious and thirsty mind. It has led me on a career journey from HR, to Non-Profit, 
       to Tech. Along the way I picked up experience and skills in Project Management, Coaching, Business Development, Training, 
@@ -46,8 +58,8 @@
 
   
   <section id="services" class="section-container">
-      <hr>
-    <h2 class="section_title"><i class="fa-solid fa-bell-concierge"></i> Services</h2>
+      <!-- <hr> -->
+    <h2 class="section_title"></i> Services <i class="fa-solid fa-bell-concierge icon-contact"></i></h2>
     <div class="services-grid">
       
       <!-- Card 1: Program and Project Delivery (Your Current Content) -->
@@ -155,6 +167,11 @@
           <li>In-person or virtual delivery, roundtables, sessions, multi-part series</li>
         </ul>
 
+        <h3>Coaching</h3>
+        <ul>
+          <li>1:1 or small group coaching for clients, staff, or program participants</li>
+        </ul>
+
 
         </div><!-- end left column wrapper-->
 
@@ -169,14 +186,6 @@
           <li>AI literacy and practical use in organizations and education</li>
           <li>Excel and reporting for non-analysts</li>
         </ul>
-
-        <h3>Coaching</h3>
-        <ul>
-          <li>1:1 or small group coaching for clients, staff, or program participants</li>
-        </ul>
-
-
-
 
 
         </div>
@@ -246,7 +255,7 @@
 <!--CONTACT SECTION -->
 
  <section class="section-container">
-  <hr>
+
    <h2 class="section_title">Contact</h2>
 
 <div class="form-container">
@@ -285,7 +294,33 @@
 
 </main>
 <footer>
+  <div class="footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="#services">Book Meeting</a></li>
+        <li><a href="#whatIcando">What I Can Do</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
+    <div>
+      <a class="footer-social" href="https://www.linkedin.com/in/jeremydutton/" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin fa-lg"></i>
+      </a>
+
+    </div>
+
+    <div>
+      <div className="logo">
+        <img src="images/JD logo.png">
+      </div>
+      <p>Jeremy Dutton Technology & Business Solutions</p>
+    </div>
+    <small class="copyright">
+      &copy; 2026 Jeremy Dutton. All rights reserved.
+    </small>
+  </div>
 </footer>
 
   
