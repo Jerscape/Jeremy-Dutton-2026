@@ -186,7 +186,7 @@ header {
   /* END OF REPLACEMENT */
   /* border: 1px solid #e0e0e0; */
   /* border: 1px solid #b000f0; */
-  border: 1px solid #b000f0;
+  border: 3px solid #b000f0;
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -274,7 +274,7 @@ header {
     transparent
   );
   background-size: 15px 15px;
-  border: 2px solid #F97316;
+  border: 3px solid #F97316;
   border-radius: 12px;
   padding: 25px 25px 25px 35px; /* left padding to clear the bar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
