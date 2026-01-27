@@ -1,11 +1,12 @@
 
 
-const btn = document.getElementById("hamburger")
+const hamburgerBtn = document.getElementById("hamburger")
 const navMenu = document.getElementById("nav-links")
 
-btn.addEventListener("click", () => {
+hamburgerBtn.addEventListener("click", () => {
   navMenu.classList.toggle("active")
-  
+  hamburgerBtn.classList.toggle("active")
+
 })
 
 

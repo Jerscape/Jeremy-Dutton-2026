@@ -25,12 +25,12 @@ body {
   justify-content: center; /* Centers links since no logo exists */
   background: #fff;
   padding: 15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
   /* border:#b000f0 2px solid;
   border-radius: 12px; */
   width: 85%;
-  margin: 20px auto 35px; /* top, left/right, bottom */
+  margin: 20px auto 50px; /* top, left/right, bottom */
   max-width: 1300px;
 }
 
@@ -74,53 +74,63 @@ body {
 
 /* Hamburger Button - hidden by default */
 .hamburger {
+  position: relative;
   display: none;
-  cursor: pointer;
+   width: 32px;
+  height: 26px;
   background: none;
   border: none;
+  cursor: pointer;
 }
+
 .hamburger span {
+  position: absolute;
+  left: 0;
   display: block;
   width: 25px;
   height: 3px;
   background: #0b0720;
-  margin: 5px;
+  margin: 0px;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform-origin: center;
 }
 
+.hamburger span:nth-child(1){top: 0px;}
+.hamburger span:nth-child(2){top: 10px;}
+.hamburger span:nth-child(3){top: 20px;}
 
-.hamburger.active span:nth-child(1) { transform: rotate(45deg); }
+
+.hamburger.active span:nth-child(1) { top: 10px; transform: rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: rotate(-45deg); }
+.hamburger.active span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
 
 
 
 /* Mobile View (under 768px) */
 @media (max-width: 768px) {
   .navbar { position: relative; }
- body { outline: 6px solid red; }
-
 
   .hamburger {
     display: block;
-      position: absolute;
+    position: absolute;
     top: 10px;
-    right: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
   }
+
   .nav-links {
     display: none; /* Hide links initially */
     flex-direction: column;
     width: 100%;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 50px;
+    gap: 5px;
   }
   .nav-links.active {
     display: flex;
   } /* Show when JS adds 'active' */
-}
-
-hr {
-  /* width: 85%; */
-  max-width: 1300px;
 }
 
 header picture,
