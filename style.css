@@ -45,7 +45,7 @@ body {
 
 .nav-pills {
   border:
-    2px,
+    5px,
     solid #b000f0;
   border-radius: 3px;
   padding: 10px;
@@ -87,10 +87,24 @@ body {
   margin: 5px;
 }
 
+
+.hamburger.active span:nth-child(1) { transform: rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg); }
+
+
+
 /* Mobile View (under 768px) */
 @media (max-width: 768px) {
+  .navbar { position: relative; }
+ body { outline: 6px solid red; }
+
+
   .hamburger {
     display: block;
+      position: absolute;
+    top: 10px;
+    right: 10px;
   }
   .nav-links {
     display: none; /* Hide links initially */
@@ -136,13 +150,6 @@ header {
   margin: 0;
   padding: 0;
 }
-
-
-/* .banner {
-  width: 100%;
-  display: block; /* Fixes the white space bug } 
-  */
-
 
 
 .intro-card {
@@ -224,9 +231,10 @@ header {
 }
 
 
-.section_title .icon-about { color: #b000f0; }   /* purple */
-.section_title .icon-contact { color:#F97316; } /* blue (example) *
-.section_title .icon-contact { color: #4da6ff; } blue (example)
+.section_title .icon-about { color: #b000f0; }   
+.section_title .icon-services { color:#F97316; } 
+.section_title .icon-contact { color: #b000f0; } 
+/* .section_title .icon-contact { color: #4da6ff; } */
 
 
 
@@ -457,14 +465,15 @@ overflow: hidden;
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .form-3col {
     grid-template-columns: 1fr;
   }
 
   .form-3col .fields {
     grid-column: auto;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+    grid-template-columns: minmax(90px, 27%) 1fr;
   }
 
   .form-3col label {
