@@ -44,9 +44,8 @@ body {
 }
 
 .nav-pills {
-  border:
-    5px,
-    solid #b000f0;
+  border: 5px solid #b000f0;
+
   border-radius: 3px;
   padding: 10px;
   background-color: #0b0720;
@@ -233,7 +232,7 @@ header {
 }
 
 .section_title {
-  font-size: 2.25rem;
+  font-size: 2.50rem;
   margin: 0 0 24px 0;  /* space under heading */
   color: #0b0720;
   /* color: #0056b3; */
@@ -302,7 +301,7 @@ header {
 }
 
 .service-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #0056b3;
   margin-bottom: 5px;
 }
@@ -314,7 +313,7 @@ header {
 }
 
 .service-card li {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 5px;
   line-height: 1.3;
 }
@@ -347,7 +346,7 @@ header {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 16px;
-  margin-top: 18px;
+  margin-top: 12px;
   padding-top: 18px;
   border-top: 1px solid #e7e7e7;
 }
@@ -395,6 +394,8 @@ header {
 
 /* inputs + select + textarea */
 .form-3col input[type="text"],
+.form-3col input[type="tel"],
+.form-3col input[type="email"],
 .form-3col textarea {
   width: 100%;
   margin: 0;
@@ -474,6 +475,25 @@ overflow: hidden;
 
 }
 
+.form-status { margin-top: 0.75rem; }
+.submit-btn.is-loading { opacity: 0.7; cursor: wait; }
+
+
+.hp {
+  position: absolute;
+  /*hides it for screenreaders*/
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.field-error {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 
 @media (max-width: 900px) {
   .form-3col {
@@ -546,3 +566,67 @@ footer .footer-social:hover { color: #b000f0; }
   font-size: 0.9rem;
 }
 
+/*ACCESSIBLITY*/
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  background: #fff;
+
+  font-size: 1.125rem;   /* text size */
+  line-height: 1.2;
+  padding: 1rem 1.25rem; /* clickable area */
+  border-radius: 0.5rem; /* optional */
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+}
+
+/* Strong keyboard-focus indicator */
+.form-3col .submit-btn:focus-visible {
+  outline: 4px solid #ffffff;   /* inner ring that pops on black */
+  outline-offset: 3px;
+  box-shadow: 0 0 0 10px rgba(176, 0, 240, 0.45); /* outer purple ring */
+  filter: brightness(1.08);
+}
+
+/* Fallback for browsers that don't support :focus-visible */
+.form-3col .submit-btn:focus {
+  outline: 4px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 10px rgba(176, 0, 240, 0.45);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*makes fields associated with errors stand out*/
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  outline: 3px solid #b000f0;
+  outline-offset: 2px;
+}
+
+/* NOTE (me): Add keyboard focus styling for nav links + hamburger.
+   Hover styles don’t help keyboard users, so this makes the focused element obvious when tabbing. */
+.nav-links a:focus-visible,
+.hamburger:focus-visible {
+  outline: 4px solid #b000f0;
+  outline-offset: 4px;
+}

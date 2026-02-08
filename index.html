@@ -1,110 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JD+</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tech and Business Consulting services offer to social services and non-profits by Jeremy Dutton">
+    <title>Jeremy Dutton Tech & Business Consultting</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/737dc87693.js" crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/737dc87693.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="images/banner-mobile.png"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="images/banner-desktop.png"
+          type="image/png"
+        />
+        <img
+          class="banner__img"
+          src="images/banner-desktop.png"
+          alt="Site banner"
+        />
+      </picture>
+    </header>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-</head>
-<body>
-<header>
-
-  <picture>
-    <source media="(max-width: 767px)" srcset="images/banner-mobile.png" type="image/png" />
-    <source media="(min-width: 768px)" srcset="images/banner-desktop.png" type="image/png" />
-    <img class="banner__img" src="images/banner-desktop.png" alt="Site banner" />
-  </picture>
-
-</header>
-
-<main>
-
-
-<div class="container-nav">
-  <nav class="navbar">
-    <ul class="nav-links" id="nav-links">
-    <li class="nav-pills"><a href="#about">ABOUT ME</a></li>
-    <li class="nav-pills"><a href="#services">SERVICES</a></li>
-    <li class="nav-pills"><a href="#contact">CONTACT</a></li>
-  </ul>
-
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </button>
-  </nav>
-</div>
-  
-<section id="about" class="section-container">
-
-  <h2 class="section_title"> <i class="fa-solid fa-image-portrait icon-about"></i> About </h2>
-  <div class="intro-card">
-    <p class="about">I have taken a slightly unusual path: HR first, then workforce development and social services, and then tech. I now offer both sides of that experience, sometimes together and sometimes separately, depending on the goal.
-      <br><br>  
-      I like work that is practical and useful. I help clarify what matters, build buy-in, and move projects forward through facilitation, project management, training and course development, CRM support, and problem solving.
-      <br><br>  
-      I am passionate and committed in all that I do. If you have a problem you think I can solve, or a contribution I can make, let's talk!
-    </p>
-  </div>
-</section>
-
-  
-  <section id="services" class="section-container">
-      <!-- <hr> -->
-    <h2 class="section_title"><i class="fa-solid fa-bell-concierge icon-services"></i> Services </h2>
-    <div class="services-grid">
-  
-
-      <!-- Card 1: Program and Project Delivery (Your Current Content) -->
-      <div class="service-card" style="--accent:#F97316;">
-        <h2><i class="fa-sharp fa-solid fa-briefcase-arrow-right"></i> Program & Project Delivery</h2>
-        <p><strong>Focus:</strong> Keeping funded work on track and moving toward outcomes. Ensuring there are stories to tell.</p>
-        <div class="service-columns">
-          <!-- left wrapper -->
-          <div>
-            <h3>Program recovery</h3>
-        <ul>
-          <li>Intake, client & partner re-engagement</li>
-          <li>KPI reset & workflow clean-up</li>
-        </ul>
-          <h3>Partnerships and stakeholder coordination</h3>
-          <ul>
-          <li>External agency coordination, employer relationships, etc </li>
-          <li>Mentor and volunteer recruitment pipelines</li>
+    <main id="main">
+      <div class="container-nav">
+        <nav class="navbar">
+          <ul class="nav-links" id="nav-links">
+            <li class="nav-pills"><a href="#about">ABOUT ME</a></li>
+            <li class="nav-pills"><a href="#services">SERVICES</a></li>
+            <li class="nav-pills"><a href="#contact">CONTACT</a></li>
           </ul>
-         
-          <h3>Operations & Tools</h3>
-              <ul>
-               <li>Staff playbooks & tracking sheets</li>
-              </ul>
-          </div> 
 
-          <!-- right wrapper -->
-          <div>
-            
-     <h3>Funder compliance</h3>
-        <ul>
-          <li>Quarterly reporting & claims support</li>
-          <li>Audit-ready documentation</li>
-        </ul>
-
-        <h3>Proposals, RFPs, and funding requests</h3>
-        <ul>
-          <li>RFP responses, program proposals, top-up requests, outcomes framing, budget-aligned workplans</li>
-        </ul>
-
-          </div> 
-        </div>
-        
-
+          <button 
+              class="hamburger" 
+              id="hamburger" 
+              aria-label="Open menu"
+              aria-controls="nav-links"
+              aria-expanded="false"
+            >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
       </div>
+    <!-- note this H1 is hidden, I added it retroactively for accessiblyt and SEO, but I dont want it to display-->      
+    <h1 class="visually-hidden">Jeremy Dutton Tech & Business Consulting</h1>
 
+      <section id="about" class="section-container">
+        <h2 class="section_title">
+          <i class="fa-solid fa-image-portrait icon-about"></i> About
+        </h2>
+        <div class="intro-card">
+          <p class="about">
+            I have taken a slightly unusual path: HR first, then workforce
+            development and social services, and then tech. I now offer both
+            sides of that experience, sometimes together and sometimes
+            separately, depending on the goal. <br /><br />
+            I like work that is practical and useful. I help clarify what
+            matters, build buy-in, and move projects forward through
+            facilitation, project management, training and course development,
+            CRM support, and problem solving.
+            <br /><br />
+            I am passionate and committed in all that I do. If you have a
+            problem you think I can solve, or a contribution I can make, let's
+            talk!
+          </p>
+        </div>
+      </section>
 
-      <!-- Card 2: Placeholder for next area -->
-      <!-- <div class="service-card" style="--accent:#F97316;">
+      <section id="services" class="section-container">
+        <!-- <hr> -->
+        <h2 class="section_title">
+          <i class="fa-solid fa-bell-concierge icon-services"></i> Services
+        </h2>
+        <div class="services-grid">
+          <!-- Card 1: Program and Project Delivery (Your Current Content) -->
+          <div class="service-card" style="--accent: #f97316">
+            <h2>
+              <i class="fa-sharp fa-solid fa-briefcase-arrow-right"></i> Program
+              & Project Delivery
+            </h2>
+            <p>
+              <strong>Focus:</strong> Keeping funded work on track and moving
+              toward outcomes. Ensuring there are stories to tell.
+            </p>
+            <div class="service-columns">
+              <!-- left wrapper -->
+              <div>
+                <h3>Program recovery</h3>
+                <ul>
+                  <li>Intake, client & partner re-engagement</li>
+                  <li>KPI reset & workflow clean-up</li>
+                </ul>
+                <h3>Partnerships and stakeholder coordination</h3>
+                <ul>
+                  <li>
+                    External agency coordination, employer relationships, etc
+                  </li>
+                  <li>Mentor and volunteer recruitment pipelines</li>
+                </ul>
+
+                <h3>Operations & Tools</h3>
+                <ul>
+                  <li>Staff playbooks & tracking sheets</li>
+                </ul>
+              </div>
+
+              <!-- right wrapper -->
+              <div>
+                <h3>Funder compliance</h3>
+                <ul>
+                  <li>Quarterly reporting & claims support</li>
+                  <li>Audit-ready documentation</li>
+                </ul>
+
+                <h3>Proposals, RFPs, and funding requests</h3>
+                <ul>
+                  <li>
+                    RFP responses, program proposals, top-up requests, outcomes
+                    framing, budget-aligned workplans
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Placeholder for next area -->
+          <!-- <div class="service-card" style="--accent:#F97316;">
         <h2><i class="fa-solid fa-chart-user"></i> Workshop Development, Training, and Coaching</h2>
         <p><strong>Focus:</strong>practical learning experiences for clients and staff, built around outcomes and real workflows.</p>
         <h3>Curriculum and workshop design</h3>
@@ -132,182 +166,278 @@
         </ul>
 
       </div> -->
-      <!-- end card 2-->
+          <!-- end card 2-->
 
-      <!-- Card 3: Placeholder for next area -->
-      <div class="service-card" style="--accent: #F97316;">
-        <h2><i class="fa-solid fa-chart-user"></i> Workshop Development, Training, and Coaching</h2>
-        <p><strong>Focus:</strong> practical learning experiences for clients and staff, built around outcomes and real workflows.</p>
-        <div class="service-columns">
-          <div><!--left column wrapper-->
+          <!-- Card 3: Placeholder for next area -->
+          <div class="service-card" style="--accent: #f97316">
+            <h2>
+              <i class="fa-solid fa-chart-user"></i> Workshop Development,
+              Training, and Coaching
+            </h2>
+            <p>
+              <strong>Focus:</strong> practical learning experiences for clients
+              and staff, built around outcomes and real workflows.
+            </p>
+            <div class="service-columns">
+              <div>
+                <!--left column wrapper-->
 
-        <h3>Curriculum and workshop design</h3>
-        <ul>
-          <li>Lesson plans, exercises, handouts, assessments, facilitation guides</li>
-        </ul>
+                <h3>Curriculum and workshop design</h3>
+                <ul>
+                  <li>
+                    Lesson plans, exercises, handouts, assessments, facilitation
+                    guides
+                  </li>
+                </ul>
 
-        <h3>Facilitation and delivery</h3>
-        <ul>
-          <li>In-person or virtual delivery, roundtables, sessions, multi-part series</li>
-        </ul>
+                <h3>Facilitation and delivery</h3>
+                <ul>
+                  <li>
+                    In-person or virtual delivery, roundtables, sessions,
+                    multi-part series
+                  </li>
+                </ul>
 
-        <h3>Coaching</h3>
-        <ul>
-          <li>1:1 or small group coaching for clients, staff, or program participants</li>
-        </ul>
+                <h3>Coaching</h3>
+                <ul>
+                  <li>
+                    1:1 or small group coaching for clients, staff, or program
+                    participants
+                  </li>
+                </ul>
+              </div>
+              <!-- end left column wrapper-->
 
+              <div>
+                <!--right column wrapper-->
 
-        </div><!-- end left column wrapper-->
+                <h3>Topic areas (examples)</h3>
+                <ul>
+                  <li>
+                    Technology and business software, including CRM basics and
+                    digital workflows, coding, etc.
+                  </li>
+                  <li>Job search, careers, employability skills, coaching</li>
+                  <li>Entrepreneurship and small business operations</li>
+                  <li>
+                    AI literacy and practical use in organizations and education
+                  </li>
+                  <li>Excel and reporting for non-analysts</li>
+                </ul>
+              </div>
+              <!--end right column wrapper-->
+            </div>
+            <!--end services column-->
+          </div>
+          <!-- end services card 3-->
 
+          <!-- Card 3: Placeholder for next area -->
+          <div class="service-card" style="--accent: #f97316">
+            <h2>
+              <i class="fa-solid fa-computer"></i> Technology, Data, and
+              Automation
+            </h2>
+            <p>
+              <strong>Focus:</strong> Keeping funded work on track and moving
+              toward outcomes. Ensuring there are stories to tell.
+            </p>
+            <div class="service-columns">
+              <div>
+                <!--left column wrapper-->
 
-        <div><!--right column wrapper--> 
-  
-        <h3>Topic areas (examples)</h3>
-        <ul>
-          <li>Technology and business software, including CRM basics and digital workflows, coding, etc.</li>
-          <li>Job search, careers, employability skills, coaching</li>
-          <li>Entrepreneurship and small business operations</li>
-          <li>AI literacy and practical use in organizations and education</li>
-          <li>Excel and reporting for non-analysts</li>
-        </ul>
+                <h3>Tech consulting and solution design</h3>
+                <ul>
+                  <li>
+                    Requirements gathering, process mapping, tool selection,
+                    implementation planning
+                  </li>
+                  <li>Job search, careers, employability skills, coaching</li>
+                  <li>Entrepreneurship and small business operations</li>
+                </ul>
 
+                <h3>CRMs, databases, and system configuration</h3>
+                <ul>
+                  <li>
+                    HubSpot configuration, properties, forms, workflows,
+                    reporting dashboards
+                  </li>
+                  <li>Job search, careers, employability skills, coaching</li>
+                  <li>Entrepreneurship and small business operations</li>
+                </ul>
 
+                <h3>Automation and integrations</h3>
+                <ul>
+                  <li>
+                    Form-to-database workflows, Zapier-style integrations,
+                    document generation, quote automation
+                  </li>
+                  <li>Job search, careers, employability skills, coaching</li>
+                  <li>Entrepreneurship and small business operations</li>
+                </ul>
+              </div>
+              <!-- end left column wrapper-->
+
+              <div>
+                <!--right column wrapper-->
+                <h3>Data and reporting</h3>
+                <ul>
+                  <li>
+                    Data cleanup, audits, tracking sheets, dashboards,
+                    funder-ready reporting outputs
+                  </li>
+                  <li>Entrepreneurship and small business operations</li>
+                </ul>
+
+                <h3>Troubleshooting and operational support</h3>
+                <ul>
+                  <li>
+                    Data cleanup, audits, tracking sheets, dashboards,
+                    funder-ready reporting outputs
+                  </li>
+                  <li>
+                    System troubleshooting, data integrity issues, workflow
+                    fixes
+                  </li>
+                </ul>
+              </div>
+              <!--end right column wrapper-->
+            </div>
+            <!--end services column-->
+          </div>
+          <!-- end services card 3-->
         </div>
-        <!--end right column wrapper-->
-       
-      </div><!--end services column-->
+        <!-- end services grid-->
+      </section>
 
-      </div> <!-- end services card 3-->
+      <!--CONTACT SECTION -->
 
+      <section class="section-container" id="contact">
+        <h2 class="section_title">
+          <i class="fa-regular fa-message icon-contact"></i> Contact
+        </h2>
 
+        <div class="form-container">
+          <form
+            class="form-3col"
+            action="https://formspree.io/f/mkoregvv"
+            method="POST"
+          >
+            <aside class="cta">
+              <h3>Interested in Learning More?</h3>
+              <p>
+                I am always happy to have a chat, so I can learn more about your
+                needs.
+              </p>
+              <p><strong>Typical response:</strong> 1–2 business days.</p>
+            </aside>
 
+            <div class="fields">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="Your name"
+                required
+              />
 
-      <!-- Card 3: Placeholder for next area -->
-  <div class="service-card" style="--accent: #F97316;">
-        <h2><i class="fa-solid fa-computer"></i> Technology, Data, and Automation</h2>
-        <p><strong>Focus:</strong> Keeping funded work on track and moving toward outcomes. Ensuring there are stories to tell.</p>
-        <div class="service-columns">
-          <div><!--left column wrapper-->
+              <label for="org">Organization:</label>
+              <input
+                type="text"
+                id="org"
+                name="org"
+                autocomplete="organization"
+                placeholder="Company/Organization (optional)"
+               
+              />
 
-        <h3>Tech consulting and solution design</h3>
-        <ul>
-          <li>Requirements gathering, process mapping, tool selection, implementation planning</li>
-          <li>Job search, careers, employability skills, coaching</li>
-          <li>Entrepreneurship and small business operations</li>
-        </ul>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com (optional)"
+                required
+              />
 
-       <h3>CRMs, databases, and system configuration</h3>
-        <ul>
-          <li>HubSpot configuration, properties, forms, workflows, reporting dashboards</li>
-          <li>Job search, careers, employability skills, coaching</li>
-          <li>Entrepreneurship and small business operations</li>
-        </ul>
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                placeholder="(###) ###-#### (optional)"
+               
+              />
 
-        <h3>Automation and integrations</h3>
-        <ul>
-          <li>Form-to-database workflows, Zapier-style integrations, document generation, quote automation</li>
-          <li>Job search, careers, employability skills, coaching</li>
-          <li>Entrepreneurship and small business operations</li>
-        </ul>
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="What can I help with?"
+                required
+              ></textarea>
 
-        </div><!-- end left column wrapper-->
+              <!-- Optional but nice: custom subject -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="New website contact form submission"
+              />
 
+              <!-- Optional: Honeypot anti-spam (hide with CSS) -->
+              <label class="hp" aria-hidden="true">
+                Don’t fill this out:
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </label>
+              <p class="form-status" aria-live="polite"></p>
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <nav class="footer-nav" aria-label="Footer">
+          <ul>
+            <!-- <li><a href="#services">Book Meeting</a></li> -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">What I Can Do</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-        <div><!--right column wrapper--> 
-                  <h3>Data and reporting</h3>
-        <ul>
-          <li>Data cleanup, audits, tracking sheets, dashboards, funder-ready reporting outputs</li>
-          <li>Entrepreneurship and small business operations</li>
-        </ul>
+        <div>
+          <a
+            class="footer-social"
+            href="https://www.linkedin.com/in/jeremydutton/"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin fa-lg"></i>
+          </a>
+        </div>
 
-
-       <h3>Troubleshooting and operational support</h3>
-        <ul>
-        <li>Data cleanup, audits, tracking sheets, dashboards, funder-ready reporting outputs</li>
-         <li>System troubleshooting, data integrity issues, workflow fixes</li>
-        </ul>
-        </div><!--end right column wrapper-->
-       
-      </div><!--end services column-->
-
-      </div> <!-- end services card 3-->
-     
-    </div> <!-- end services grid-->
-    
-</section>
-
-<!--CONTACT SECTION -->
-
- <section class="section-container" id="contact">
-
-   <h2 class="section_title"><i class="fa-regular fa-message icon-contact"></i> Contact</h2>
-
-<div class="form-container">
-  <form action="/action_page.php" class="form-3col">
-
-    <aside class="cta">
-      <h3>Interested in Learning More?</h3>
-      <p>I am always happy to have a chat, so I can learn more about your needs.</p>
-      <p><strong>Typical response:</strong> 1–2 business days.</p>
-    </aside>
-
-    <div class="fields">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
-
-      <label for="org">Organization:</label>
-      <input type="text" id="org" name="org" autocomplete="organization" placeholder="Company / org (optional)">
-
-      <label for="email">Email:</label>
-      <input type="text" id="email" name="email" autocomplete="email" placeholder="you@example.com">
-
-      <label for="phone">Phone:</label>
-      <input type="text" id="phone" name="phone" autocomplete="tel" placeholder="(###) ###-#### (optional)">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="What can I help with?"></textarea>
-
-      <button type="submit" class="submit-btn">Submit</button>
-
-    </div>
-
-  </form>
-</div>
-
- </section>
-
-</main>
-<footer>
-  <div class="footer-inner">
-    <nav class="footer-nav" aria-label="Footer">
-      <ul>
-        <!-- <li><a href="#services">Book Meeting</a></li> -->
-        <li><a href="#about">About</a></li>
-        <li><a href="#whatIcando">What I Can Do</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div>
-      <a class="footer-social" href="https://www.linkedin.com/in/jeremydutton/" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin fa-lg"></i>
-      </a>
-
-    </div>
-
-    <div>
-      <div className="logo">
-        <img src="images/JD logo.png">
+        <div>
+          <div class="logo">
+            <img src="images/JD logo.png" />
+          </div>
+          <p>Jeremy Dutton Technology & Business Solutions</p>
+          <p>A division of Northjay Solutions Inc.</p>
+        </div>
+        <small class="copyright">
+          &copy; 2026 Northjay Solutions Inc. All rights reserved.
+        </small>
       </div>
-      <p>Jeremy Dutton Technology & Business Solutions</p>
-      <p>A division of Northjay Solutions Inc.</p>
-    </div>
-    <small class="copyright">
-      &copy; 2026 Jeremy Dutton. All rights reserved.
-    </small>
-  </div>
-</footer>
+    </footer>
 
-<script src="/main.js"></script>
-</body>
+    <script src="/main.js"></script>
+  </body>
 </html>
