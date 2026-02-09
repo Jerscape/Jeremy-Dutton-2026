@@ -257,6 +257,12 @@ header {
 
 /*THE INDIVIDUAL CARD*/
 
+
+.service-card .service-line {
+  font-size: 1.3rem; /* adjust */
+}
+
+
 .service-card {
   position: relative;
   overflow: hidden;
@@ -565,6 +571,8 @@ footer .footer-social:hover { color: #b000f0; }
   opacity: 0.85;
   font-size: 0.9rem;
 }
+
+
 
 /*ACCESSIBLITY*/
 
